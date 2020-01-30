@@ -1,3 +1,13 @@
 # COE1501
 
-COE 1501: Algorithms Programs
+COE 1501: Algorithms Projects
+
+Project 1
+
+Project 2
+
+Project 3
+
+Project 4
+
+Project 5
