@@ -1,0 +1,34 @@
+Alyssa Jordan
+COE 1501 Project 3
+Documentation
+
+This project had the following requirements: The retrieval operations on either attribute (minimum rent or 
+maximum square footage) must have a O(log n) runtime (both for all apartments and for those within a specific 
+city). Updates and removals should also have a O(log n) runtime. There were no memory requirements. Due to this, 
+my project favored runtime over memory and the following solution was decided as the best approach.
+
+I decided to use a DLB as my indirection data structure. This structure was based off of my DLB from project 1.
+There is two DLBs, one is called rent_sqftDLB this is the "regular" DLB, built using a concatenation of the 
+apartment's street number, apartment number, and zipcode. The other DLB is called cityDLB and is built using the 
+apartment's city. The main reason for the second DLB was I needed a way to keep track of the apartments listed 
+for each city to be able to retrieve the lowest rent apartment and highest square footage apartment by city. 
+
+The rent_sqftDLB uses two priority queues total: one rent (min) indexable priority queue and one square footage 
+(max) indexable priority queue. At the DLB traversal at the end of each apartment concatenation (street number, 
+apartment number, and zipcode), the next node contains a Node with the Apartment object. For the cityDLB, at the 
+end of each DLB city path there are two indexable priority queues one minimum rent priority queue and one maximum
+square footage priority queue for that specific city.
+
+The reason I chose a DLB for the indirection is because a DLB has a worst runtime of Rw where R is the radix and
+w is the width. Therefore the runtime to search for the city or the apartment concatenation of street number, 
+apartment number, and zipcode is constant. This runtime is added to the runtime it takes to run the various 
+operations in the indexable priority queue. Update and remove have an O(log n) runtime since we are using an
+indexable priority queue using heaps. We are able to access the object we want to update or remove in constant 
+time because we simply go to the index in the array. The priority queue must readjust after the update or remove
+which gives us a O(log n) runtime. We techically run update and delete twice for any one update or delete,
+respectively. This is because we must delete from the overall PQs and the city specific PQs but O(log n + log n)
+= O(log n). Find for an indexable priority queue has O(1) runtime. Retrieve the lowest rent or highest square
+footage for all city or one specific city is all constant runtime.
+
+Overall, runtime was prioritized over memory in this specific project. If the project specifications had been different, a different approach would have likely been taken instead. Finding balance between runtime and memory is critical to all programs.
+

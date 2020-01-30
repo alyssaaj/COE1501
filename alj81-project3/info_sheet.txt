@@ -1,0 +1,56 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name:  Alyssa Jordan
+
+Lecture section:  T/H 9:30-10:45AM (NonW) - 13122
+
+Recitation day and time:  F 9:00-9:50AM
+
+Assignment #:  3
+
+Program due date:  10/29/19
+
+Handed in date:  10/29/19
+
+Source code file name(s):
+
+	AptTracker.java
+	DLB.java
+	IndexPQ.java
+	Apartment.java
+	StdOut.java
+
+
+Other file name(s) (if relevant):
+	documentation.txt
+
+
+
+
+
+
+Does your program run without error?: Yes
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+
+
+
+
+
+
+
+Additional comments to the grader:
+
+
+
+
+
+
+

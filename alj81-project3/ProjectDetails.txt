@@ -1,0 +1,39 @@
+Project Details:
+	- write a menu-based user interface drive program 
+		- runs in terminal
+	- implement a priority queue-based data structure
+		- stores objects according to the relative priorities of TWO of their attributes
+			- making it efficient to retrieve objects with the minimum or maximum value of either attribute
+			- min attribute --> price
+			- max attribute --> size
+
+		- Your data structure should further be indexable to allow for efficient updates of entered items
+
+		- Want users to be able to enter details about apartments that they are considering renting
+
+		- User should be able to efficiently retrieve the apartment with the highest square footage or lowest rent.
+
+		- Should assume that the user is looking for apartments in mulitple different cities
+
+		- Retrievals should be possible on the set of all entered apartments or on the set of all apartments from a specific city
+
+
+
+	Step 1: Create a class to store data about apartments
+		- Contains the following information:
+			- A street address
+			- An apartment number
+			- The city
+			- The apartment's ZIP code
+			- The monthly cost to rent
+			- The square footage 
+
+	Step 2: Write a terminal menu-based driver program 
+		- Your driver must present the user with the following options:
+			i. Add an apartment
+			ii. Update an apartment
+			iii. Remove a specific apartment from consideration
+			iv. Retrieve the lowest rent apartment
+			v. Retrieve the hightest square footage apartment
+			vi. Retrieve the lowest rent apartment by city
+			vii. Retrieve the highest square footage apartment by city
